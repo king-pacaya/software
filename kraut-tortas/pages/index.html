@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kraut</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="shortcut icon" href="../multimedia/favicon.png">
+
+  <!-- Fuente DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../css/index.css">
+</head>
+<body class="bg-gray-100 text-gray-900 font-sans">
+
+  <!-- Header -->
+  <header id="header" class="bg-red-600 text-white p-6 flex justify-between items-center fixed w-full top-0 header-visible header-transition z-50">
+    <a href="index.html" class="flex items-center space-x-3">
+      <img src="../multimedia/favicon.png" alt="Logo Kraut" class="w-10 h-10">
+      <h1 class="text-3xl font-bold">Kraut</h1>
+    </a>
+    <div class="flex space-x-6">
+      <button onclick="window.location.href='perfil.html'" class="text-white text-2xl">
+        <i class="fas fa-user-circle"></i>
+      </button>
+      <div class="relative">
+        <button onclick="window.location.href='carrito.html'" class="text-white text-2xl">
+          <i class="fas fa-shopping-bag"></i>
+        </button>
+        <span id="carrito-count" class="absolute -top-2 -right-2 bg-white text-red-600 font-bold rounded-full w-6 h-6 flex items-center justify-center text-sm">0</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenido Principal -->
+  <main class="p-6 pt-24 max-w-6xl mx-auto">
+    <div id="productos-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-red-600 text-white text-center p-4 mt-6">
+    <p class="text-lg italic">Deliciosas tortas para cada ocasión</p>
+  </footer>
+
+  <script type="text/javascript" src="../js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+    * {
+      font-family: 'DM Sans', sans-serif;
+    }
+    input[type=number] {
+      -moz-appearance: textfield; /* Eliminar flechas en Firefox */
+    }
+    input[type=number]::-webkit-outer-spin-button,
+    input[type=number]::-webkit-inner-spin-button {
+      -webkit-appearance: none; /* Eliminar flechas en Chrome, Safari, Edge */
+      margin: 0;
+    }
+    input[type=number]:focus {
+      outline: none; /* Quitar borde al hacer focus */
+    }

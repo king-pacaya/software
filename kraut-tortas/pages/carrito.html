@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito de Compras</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+  <link rel="shortcut icon" href="multimedia/favicon.png">
+
+  <!-- Fuente DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../css/carrito.css">
+</head>
+<body class="bg-gray-100 text-gray-900 font-sans">
+
+  <!-- Header -->
+  <header class="bg-red-600 text-white p-6 flex justify-between items-center">
+    <a href="index.html">
+      <img src="../multimedia/favicon.png" alt="Logo Kraut" class="w-10 h-10">
+    </a>
+    <h1 class="text-3xl font-bold text-center flex-1">Carrito de Compras</h1>
+    <div class="w-10"></div>
+  </header>
+
+  <!-- Contenido del carrito -->
+  <main class="p-6 max-w-4xl mx-auto">
+    <h2 class="text-2xl font-bold mb-4">Tus productos</h2>
+    <div id="carrito-container" class="space-y-4"></div>
+
+    <!-- Mostrar Total -->
+    <div id="totalContainer" class="text-xl font-semibold text-right text-gray-700 mt-4"></div>
+
+    <!-- Botón de Realizar Pedido -->
+    <div class="mt-8">
+      <button onclick="realizarPedido()" class="bg-red-600 text-white text-lg px-6 py-4 rounded-full font-semibold hover:bg-red-700 w-full">Realizar pedido</button>
+    </div>
+  </main>
+
+  <!-- Modal de Confirmación de Pedido -->
+  <div id="pedidoModal" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center hidden">
+    <div class="bg-white p-6 rounded-lg max-w-md text-center">
+      <h3 class="text-2xl font-bold mb-4">Confirmación de Pedido</h3>
+      <p id="pedidoMensaje" class="text-lg mb-6"></p>
+      <button onclick="descargarRecibo()" class="bg-green-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-green-700 mr-4">Descargar Recibo</button>
+      <button onclick="cerrarModal('pedidoModal')" class="bg-red-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-red-700">Cerrar</button>
+    </div>
+  </div>
+
+  <!-- Modal de Login Requerido -->
+  <div id="loginModal" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center hidden">
+    <div class="bg-white p-6 rounded-lg max-w-md text-center">
+      <h3 class="text-2xl font-bold mb-4">Inicio de Sesión Requerido</h3>
+      <p class="text-lg mb-6">Por favor, inicie sesión para realizar su pedido.</p>
+      <button onclick="window.location.href='login.html'" class="bg-red-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-red-700">Iniciar Sesión</button>
+    </div>
+  </div>
+
+  <!-- Modal de Confirmación de Eliminación -->
+  <div id="eliminarModal" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center hidden">
+    <div class="bg-white p-6 rounded-lg max-w-md text-center">
+      <h3 class="text-2xl font-bold mb-4">Eliminar Producto</h3>
+      <p class="text-lg mb-6">¿Está seguro de que desea eliminar este producto del carrito?</p>
+      <button id="confirmarEliminar" class="bg-red-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-red-700 mr-4">Eliminar</button>
+      <button onclick="cerrarModal('eliminarModal')" class="bg-gray-300 text-gray-700 px-4 py-2 rounded-full font-semibold hover:bg-gray-400">Cancelar</button>
+    </div>
+  </div>
+
+  <!-- Modal de Exceso de Stock -->
+  <div id="stockModal" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center hidden">
+    <div class="bg-white p-6 rounded-lg max-w-md text-center">
+      <h3 class="text-2xl font-bold mb-4">Stock Insuficiente</h3>
+      <p class="text-lg mb-6">No hay suficiente stock para agregar más de este producto.</p>
+      <button onclick="cerrarModal('stockModal')" class="bg-red-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-red-700">Cerrar</button>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="../js/carrito.js"></script>
+</body>
+</html>

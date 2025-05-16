@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil de Usuario</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="shortcut icon" href="multimedia/favicon.png">
+
+  <!-- Fuente DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../css/perfil.css">
+</head>
+<body class="bg-gray-100 text-gray-900 font-sans">
+
+  <!-- Header -->
+  <header class="bg-red-600 text-white p-6 flex justify-between items-center">
+    <a href="index.html" class="flex items-center space-x-3">
+      <img src="../multimedia/favicon.png" alt="Logo Kraut" class="w-10 h-10">
+    </a>
+    <h1 id="user-name" class="text-3xl font-bold flex-1 text-center"></h1>
+    <button onclick="logout()" class="bg-white text-red-600 px-4 py-2 rounded-full font-semibold hover:bg-gray-100">Cerrar sesión</button>
+  </header>
+
+  <!-- Formulario de perfil -->
+  <main class="p-6 max-w-3xl mx-auto">
+    <h2 class="text-2xl font-bold mb-4 text-center">Información de tu cuenta</h2>
+    <form id="perfil-form" class="space-y-4">
+      <!-- Campos de Nombre y Apellido -->
+      <div class="grid grid-cols-2 gap-4">
+        <div>
+          <label for="nombre" class="block text-lg font-semibold">Nombre</label>
+          <input type="text" id="nombre" class="w-full p-2 border rounded" placeholder="Nombre">
+        </div>
+        <div>
+          <label for="apellido" class="block text-lg font-semibold">Apellido</label>
+          <input type="text" id="apellido" class="w-full p-2 border rounded" placeholder="Apellido">
+        </div>
+      </div>
+
+      <!-- Campos de Dirección -->
+      <h3 class="text-xl font-semibold mt-6">Dirección</h3>
+      <div class="grid grid-cols-2 gap-4">
+        <div>
+          <label for="provincia" class="block text-lg font-semibold">Provincia</label>
+          <input type="text" id="provincia" class="w-full p-2 border rounded" placeholder="Provincia">
+        </div>
+        <div>
+          <label for="distrito" class="block text-lg font-semibold">Distrito</label>
+          <input type="text" id="distrito" class="w-full p-2 border rounded" placeholder="Distrito">
+        </div>
+      </div>
+      <div>
+        <label for="calle" class="block text-lg font-semibold">Calle</label>
+        <input type="text" id="calle" class="w-full p-2 border rounded" placeholder="Calle">
+      </div>
+      <div>
+        <label for="codigo-postal" class="block text-lg font-semibold">Código Postal</label>
+        <input type="text" id="codigo-postal" class="w-full p-2 border rounded" placeholder="Código Postal">
+      </div>
+
+      <!-- Campos de Teléfono y Correo -->
+      <div>
+        <label for="telefono" class="block text-lg font-semibold">Teléfono</label>
+        <input type="tel" id="telefono" class="w-full p-2 border rounded" placeholder="Número de Teléfono">
+      </div>
+      <div>
+        <label for="correo" class="block text-lg font-semibold">Correo</label>
+        <input type="email" id="correo" class="w-full p-2 border rounded" placeholder="Correo Electrónico">
+      </div>
+
+      <!-- Botón Guardar -->
+      <div class="text-center">
+        <button type="button" onclick="guardarPerfil()" class="bg-red-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-red-700">Guardar</button>
+      </div>
+    </form>
+  </main>
+
+  <!-- Modal de confirmación de guardado -->
+  <div id="modalGuardar" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center hidden">
+    <div class="bg-white p-6 rounded-lg max-w-md text-center">
+      <h3 class="text-2xl font-bold mb-4">Guardado</h3>
+      <p class="text-lg">La información de perfil se guardó correctamente.</p>
+      <button onclick="cerrarModal('modalGuardar')" class="bg-red-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-red-700 mt-4">Aceptar</button>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="../js/perfil.js"></script>
+</body>
+</html>

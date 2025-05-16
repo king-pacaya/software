@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="shortcut icon" href="../multimedia/favicon.png">
+
+  <!-- Fuente DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../css/login.css">
+</head>
+<body class="bg-gray-100 text-gray-900 font-sans">
+
+  <!-- Header -->
+  <header class="bg-red-600 text-white p-6 flex justify-between items-center">
+    <a href="index.html" class="flex items-center">
+      <img src="../multimedia/favicon.png" alt="Logo Kraut" class="w-10 h-10">
+    </a>
+    <h1 class="text-3xl font-bold text-center flex-1">Login</h1>
+    <div class="w-10"></div> <!-- Espacio vacío para centrar el título -->
+  </header>
+
+  <!-- Formulario de Login/Registro -->
+  <main class="p-6 max-w-md mx-auto">
+    <h2 class="text-2xl font-bold mb-4 text-center" id="form-title">Iniciar sesión</h2>
+
+    <!-- Formulario de Login -->
+    <form id="login-form" class="space-y-4" onkeydown="submitOnEnter(event, 'login')">
+      <div>
+        <label for="username" class="block text-lg font-semibold">Nombre de Usuario</label>
+        <input type="text" id="username" class="w-full p-2 border rounded" placeholder="Nombre de Usuario" required>
+      </div>
+      <div>
+        <label for="password" class="block text-lg font-semibold">Contraseña</label>
+        <input type="password" id="password" class="w-full p-2 border rounded" placeholder="Contraseña" required>
+      </div>
+      <p id="login-error" class="text-red-600 hidden">Usuario no existe. Por favor, registre una cuenta nueva.</p>
+      <p id="password-error" class="text-red-600 hidden">Contraseña incorrecta. Inténtelo de nuevo.</p>
+      <button type="button" onclick="login()" class="bg-red-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-red-700 w-full">Ingresar</button>
+    </form>
+
+    <!-- Formulario de Registro -->
+    <form id="register-form" class="space-y-4 hidden" onkeydown="submitOnEnter(event, 'register')">
+      <div>
+        <label for="new-username" class="block text-lg font-semibold">Nombre de Usuario</label>
+        <input type="text" id="new-username" class="w-full p-2 border rounded" placeholder="Nombre de Usuario" required>
+      </div>
+      <div>
+        <label for="new-password" class="block text-lg font-semibold">Contraseña</label>
+        <input type="password" id="new-password" class="w-full p-2 border rounded" placeholder="Contraseña" required>
+      </div>
+      <p id="register-success" class="text-green-600 hidden">Usuario registrado con éxito. Ahora puede iniciar sesión.</p>
+      <button type="button" onclick="register()" class="bg-red-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-red-700 w-full">Registrar</button>
+    </form>
+
+    <!-- Enlaces para cambiar entre Login y Registro -->
+    <div class="text-center mt-4">
+      <p id="switch-to-register" class="text-red-600 cursor-pointer font-medium" onclick="toggleForms()">¿No tienes cuenta? Regístrate aquí.</p>
+      <p id="switch-to-login" class="text-red-600 cursor-pointer font-medium hidden" onclick="toggleForms()">¿Ya tienes cuenta? Inicia sesión aquí.</p>
+    </div>
+  </main>
+
+  <script type="text/javascript" src="../js/login.js"></script>
+</body>
+</html>

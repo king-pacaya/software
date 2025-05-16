@@ -1,0 +1,58 @@
+[
+  {
+    "nombre": "Torta de Chocolate",
+    "precio": 30.00,
+    "detalles": "Deliciosa torta de chocolate con relleno de ganache.",
+    "imagen": "../multimedia/torta-de-chocolate.webp",
+    "stock": 10
+  },
+  {
+    "nombre": "Torta de Fresa",
+    "precio": 25.00,
+    "detalles": "Esponjosa torta de fresa con crema chantilly.",
+    "imagen": "../multimedia/torta-de-fresa.png",
+    "stock": 8
+  },
+  {
+    "nombre": "Torta Red Velvet",
+    "precio": 35.00,
+    "detalles": "Torta suave de red velvet con cobertura de queso crema.",
+    "imagen": "../multimedia/torta-red-velvet.webp",
+    "stock": 5
+  },
+  {
+    "nombre": "Torta Selva Negra",
+    "precio": 40.00,
+    "detalles": "Torta de chocolate con capas de crema y cerezas.",
+    "imagen": "../multimedia/torta-selva-negra.webp",
+    "stock": 7
+  },
+  {
+    "nombre": "Torta Tres Leches",
+    "precio": 28.00,
+    "detalles": "Torta tradicional bañada en tres tipos de leche y decorada con crema.",
+    "imagen": "../multimedia/torta-tres-leches.webp",
+    "stock": 12
+  },
+  {
+    "nombre": "Torta de Zanahoria",
+    "precio": 32.00,
+    "detalles": "Torta de zanahoria con nueces y cobertura de queso crema.",
+    "imagen": "../multimedia/torta-de-zanahoria.webp",
+    "stock": 6
+  },
+  {
+    "nombre": "Torta de Almendra",
+    "precio": 45.00,
+    "detalles": "Torta de almendras con textura suave y sabor intenso.",
+    "imagen": "../multimedia/torta-de-almendra.jpeg",
+    "stock": 9
+  },
+  {
+    "nombre": "Torta de Limón",
+    "precio": 27.00,
+    "detalles": "Torta de limón fresca y esponjosa con un toque cítrico.",
+    "imagen": "../multimedia/torta-de-limon.jpeg",
+    "stock": 4
+  }
+]

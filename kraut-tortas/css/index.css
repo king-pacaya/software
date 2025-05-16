@@ -1,0 +1,12 @@
+    * {
+      font-family: 'DM Sans', sans-serif;
+    }
+    .header-hidden {
+      transform: translateY(-100%);
+    }
+    .header-visible {
+      transform: translateY(0);
+    }
+    .header-transition {
+      transition: transform 0.3s ease-in-out;
+    }
