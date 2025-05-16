@@ -1,0 +1,105 @@
+* {
+margin: 0;
+box-sizing: border-box;
+font-family: 'DM Sans', sans-serif;
+}
+
+body {
+padding: 3vh 3vw;
+}
+
+.details_container {
+position: relative;
+border: solid red 2px;
+width: 100%;
+height: auto;
+display: flex;
+flex-wrap: wrap;
+}
+
+.block {
+border: solid blue 2px;
+width: 50%;
+}
+
+.cotizacion_id {
+position: relative;
+margin: 2vh auto;
+font-weight: bold;
+width: 70%;
+}
+	.cotizacion_id p {
+	text-align: center;
+	font-family: 'Archivo Black', sans-serif !important;
+	padding: 1vh 0;
+	}
+	.cotizacion_id p:nth-child(1) {
+	text-transform: uppercase;
+	font-size: 30px;
+	}
+	.cotizacion_id p:nth-child(2) {
+	font-size: 25px;
+	background: #d0cece;
+	}
+
+.contacto {
+margin: 2vh auto;
+width: 70%;
+border: solid black 2px;
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+}
+	.contacto p {
+ 	width: 100%;
+ 	border: solid orange 2px;
+ 	padding: 2vh 2vw;
+ 	font-weight: bold;
+	}
+
+h1 {
+text-align: center;
+}
+
+h2 {
+text-align: center;
+margin: 5vh 0 0 0;
+padding: 1vh 0;
+}
+
+.detalles {
+margin: 0 auto;
+width: 70%;
+border: solid black 2px;
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+}
+ .detalles p {
+ width: 50%;
+ padding: 2vh 2vw;
+ text-align: center;
+ font-weight: bold;
+ }
+
+table {
+width: 100%;
+border-collapse: collapse;
+}
+	table th {
+	text-align: center;
+	color: white;
+	padding: 1vh 0;
+	}
+	table tr:nth-child(even) {
+	background: #cedfdf;
+	}
+	table th:nth-child(odd) {
+	background: red;
+	}
+	table th:nth-child(even) {
+	background: black;
+	}
+	table td {
+	text-align: center;
+	}

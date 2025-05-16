@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario de Cotización</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="formulario.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:wght@400;700&family=Oswald&family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="multimedia/favicon.png">
+</head>
+<body>
+    <div class="bgi">
+        <img src="multimedia/back.png">
+    </div>
+
+    <h1>Cotización</h1>
+
+    <form action="guardar_cotizacion.php" method="POST">
+        <div class="formdiv">        
+            <h2>Detalles de Cotización:</h2>
+            <div class="formdd">
+                <label for="cliente">Cliente:</label>
+                <input type="text" id="cliente" name="cliente" placeholder="Cliente" required><br>
+            </div>
+
+            <div class="formdd">
+                <label for="telefono">Teléfono:</label>
+                <input type="number" id="telefono" name="telefono" placeholder="Teléfono" required><br>
+            </div>
+
+            <div class="formdd">
+                <label for="forma_pago">Forma de Pago:</label>
+                <input type="text" id="forma_pago" name="forma_pago" placeholder="Forma de pago" required><br>
+            </div>
+
+            <div class="formdd">
+                <label for="moneda">Moneda:</label>
+                <select id="moneda" name="moneda" required>
+                    <option value="Soles">Soles</option>
+                    <option value="Dólares">Dólares</option>
+                </select><br>
+            </div>
+
+            <div class="formdd">
+                <label for="ruc">RUC / DNI:</label>
+                <input type="number" id="ruc" name="ruc" placeholder="RUC / DNI" required><br>
+            </div>
+
+            <div class="formdd">
+                <label for="lugar_entrega">Lugar de Entrega:</label>
+                <input type="text" id="lugar_entrega" name="lugar_entrega" placeholder="Lugar de entrega" required><br>
+            </div>
+
+            <div class="formdd" style="display: none;">
+                <label for="atencion">Vendedor:</label>
+                <input type="text" id="atencion" name="atencion" placeholder="Vendedor"><br>
+            </div>
+
+            <div class="formdd">
+                <label for="validez">Validez:</label>
+                <input type="text" id="validez" name="validez" placeholder="Validez" required><br>
+            </div>
+        </div>
+        <div class="formdiv">
+            <h2>Objetos de Cotización:</h2>
+            <div id="productos">
+                <div class="producto">                
+                    <div class="formdd">
+                        <label for="producto_1">Producto:</label>
+                        <input type="text" id="producto_1" name="producto[]" placeholder="Objeto" required>
+                    </div>
+
+                    <div class="formdd">
+                        <label for="cantidad_1">Cantidad:</label>
+                        <input type="number" id="cantidad_1" name="cantidad[]" placeholder="Cantidad" required>
+                    </div>
+
+                    <div class="formdd">
+                        <label for="precio_unitario_1">Precio Unitario:</label>
+                        <input type="number" id="precio_unitario_1" name="precio_unitario[]" placeholder="Precio" required>
+                    </div>
+
+                    <div class="formdd">
+                        <label for="tiempo_entrega_1">Tiempo de Entrega:</label>
+                        <input type="text" id="tiempo_entrega_1" name="tiempo_entrega[]" placeholder="Tiempo de entrega" required>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button type="button" onclick="agregarProducto()">Agregar Producto</button><br>
+            <input type="submit" value="Guardar Cotización">
+        </div>
+    </form>
+
+    <script>
+        var productoCount = 1;
+
+        function agregarProducto() {
+            productoCount++;
+            var nuevoProducto = document.createElement('div');
+            nuevoProducto.classList.add('producto');
+
+            nuevoProducto.innerHTML = `
+                <div class="formdd">
+                    <label for="producto_${productoCount}">Producto:</label>
+                    <input type="text" id="producto_${productoCount}" name="producto[]" placeholder="Objeto" required>
+                </div>
+
+                <div class="formdd">
+                    <label for="cantidad_${productoCount}">Cantidad:</label>
+                    <input type="number" id="cantidad_${productoCount}" name="cantidad[]" placeholder="Cantidad" required>
+                </div>
+
+                <div class="formdd">
+                    <label for="precio_unitario_${productoCount}">Precio Unitario:</label>
+                    <input type="number" id="precio_unitario_${productoCount}" name="precio_unitario[]" placeholder="Precio" required>
+                </div>
+
+                <div class="formdd">
+                    <label for="tiempo_entrega_${productoCount}">Tiempo de Entrega:</label>
+                    <input type="text" id="tiempo_entrega_${productoCount}" name="tiempo_entrega[]" placeholder="Tiempo de entrega" required>
+                </div>
+                
+                <button type="button" onclick="eliminarProducto(this)">Eliminar</button>
+            `;
+
+            document.getElementById('productos').appendChild(nuevoProducto);
+        }
+
+        function eliminarProducto(elemento) {
+            // Obtener el elemento padre (div.producto) y eliminarlo
+            var padre = elemento.parentNode;
+            padre.parentNode.removeChild(padre);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,354 @@
+* {
+margin: 0;
+box-sizing: border-box;
+font-family: 'DM Sans', sans-serif;
+}
+
+body {
+padding: 3vh 3.5vw;
+}
+
+.header {
+text-align: center;
+font-weight: bold;
+padding: 1.5vh 0;
+font-weight: 18px;
+display: none;
+}
+
+.details_container {
+position: relative;
+width: 100%;
+height: auto;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+
+.block:nth-child(1) {
+width: 50%;
+position: relative;
+}
+.block:nth-child(2) {
+width: 30%;
+position: relative;
+}
+
+.cotizacion_id {
+position: relative;
+margin: 2vh auto;
+font-weight: bold;
+width: 70%;
+}
+	.cotizacion_id p {
+	text-align: center;
+	font-family: 'Archivo Black', sans-serif !important;
+	padding: 1vh 0;
+	}
+	.cotizacion_id p:nth-child(1) {
+	text-transform: uppercase;
+	font-size: 30px;
+	}
+	.cotizacion_id p:nth-child(2) {
+	font-size: 25px;
+	background: #d0cece;
+	}
+
+.contacto {
+margin: 2vh auto;
+width: 70%;
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+}
+	.contacto p {
+ 	width: 100%;
+ 	padding: 1vh 0;
+ 	/text-align: left;/
+ 	word-wrap: break-word;
+ 	font-size: 17px;
+	}
+	.contacto p i {
+	padding: 0 1vw;
+	font-size: 20px;
+	}
+
+.logo, .date {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+}
+.logo {
+height: 15vh;
+}
+	.logo img {
+	height: 100%;
+	}
+
+.date {
+height: auto;
+}
+	.date .content {
+	width: 100%;
+	}
+	.date .content p {
+	width: 100%;
+	text-align: center;
+	font-size: 17px;
+	}
+	.date .content p:nth-child(1) {
+	background: #d0cece;
+	font-weight: bold;
+	padding: 0.5vh 0;
+	}
+	.date .content p:nth-child(2) {
+	padding: 1vh 0;
+	}
+
+
+h1 {
+text-align: center;
+}
+
+h2 {
+text-align: center;
+margin: 5vh 0 0 0;
+padding: 1vh 0;
+}
+
+.detalles {
+margin: 0 auto 2vh auto;
+width: 70%;
+border: solid black 2px;
+display: flex;
+flex-wrap: wrap;
+}
+ .detalles p {
+ width: calc(100%/6);
+ padding: 1vh 1vw;
+ text-align: left;
+ font-weight: bold;
+ text-transform: uppercase;
+ font-size: 17px;
+ }
+
+table {
+width: 100%;
+border-collapse: collapse;
+font-size: 17px;
+}
+	table th {
+	text-align: center;
+	color: white;
+	padding: 1vh 0;
+	}
+	table tr:nth-child(even) {
+	background: #cedfdf;
+	}
+	table th:nth-child(odd) {
+	background: #f74705;
+	}
+	table th:nth-child(even) {
+	background: black;
+	}
+	table td {
+	text-align: center;
+	padding: 0.7vh 0;
+	}
+
+.finalq {
+margin: 4vh auto 0 auto;
+width: 90%;
+}
+ .finalq p {
+ text-align: center;
+ padding: 1vh 0;
+ font-size: 17px;
+ }
+ .finalq p:nth-child(2) {
+ font-weight: bold;
+ font-size: 20px;
+ }
+
+.btnimp {
+display: block;
+margin: 3vh auto;
+padding: 2vh 3vw;
+border-radius: 10px;
+border: none;
+cursor: pointer;
+background: black;
+color: white;
+border: solid black 2px;
+transition: 0.3s ease;
+font-weight: bold;
+font-size: 17px;
+font-family: 'DM Sans', sans-serif;
+}
+
+.btnimp:hover {
+background: white;
+color: black;
+border: solid black 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media print {
+	.header {
+	display: block;
+    padding: 0.5vh 0;
+    font-weight: 16px;
+	}
+
+
+ 
+	.cotizacion_id p:nth-child(2) {
+	print-color-adjust: exact;
+	-webkit-print-color-adjust: exact;
+	-moz-print-color-adjust: exact;
+	-ms-print-color-adjust: exact;
+	}
+
+	.cotizacion_id p:nth-child(1) {
+	text-transform: uppercase;
+	font-size: 20px;
+	}
+	.cotizacion_id p:nth-child(2) {
+	font-size: 16px;
+	background: #d0cece;
+	}
+ 
+    table {
+    width: 100%;
+    border-collapse: collapse;
+    }
+ 
+	table tr:nth-child(even) {
+	print-color-adjust: exact;
+	-webkit-print-color-adjust: exact;
+	-moz-print-color-adjust: exact;
+	-ms-print-color-adjust: exact;
+	}
+
+	table th:nth-child(odd) {
+	print-color-adjust: exact;
+	-webkit-print-color-adjust: exact;
+	-moz-print-color-adjust: exact;
+	-ms-print-color-adjust: exact;
+	}
+
+	table th:nth-child(even) {
+	print-color-adjust: exact;
+	-webkit-print-color-adjust: exact;
+	-moz-print-color-adjust: exact;
+	-ms-print-color-adjust: exact;
+	}
+
+    table {
+    font-size: 12px;
+    }
+	table th {
+	padding: 0.5vh 0;
+	}
+	table td {
+	text-align: center;
+	padding: 0.4vh 0;
+	}
+
+	.date .content p {
+	font-size: 16px;
+	}
+ 
+	.date .content p:nth-child(1), .clnumber p:nth-child(1), .conumber p:nth-child(1) {
+	print-color-adjust: exact;
+	-webkit-print-color-adjust: exact;
+	-moz-print-color-adjust: exact;
+	-ms-print-color-adjust: exact;
+	}
+
+	.block:nth-child(1) {
+	width: 45%;
+	}
+
+	.date .content p:nth-child(1) {
+	padding: 0.5vh 0;
+	}
+
+	.cotizacion_id {
+	width: 100%;
+	}
+
+	.contacto {
+	width: 90%;
+    margin: 0.5vh auto;
+	}
+
+	.contacto p {
+ 	width: 100%;
+ 	font-size: 12px;
+    padding: 0.5vh 1vw;
+	}
+
+	.block:nth-child(2) {
+	width: 40%;
+	}
+
+	.date {
+	width: 90%;
+	margin: 0 auto;
+	height: auto;
+	}
+
+	.logo img {
+	height: auto;
+	width: 100%;
+	}
+
+	.detalles {
+	width: 100%;
+    margin: 0 auto 0.5vh auto;
+	}
+ 
+	.detalles p {
+	font-size: 12px;
+	width: calc(100%/5);
+    padding: 0.5vh 1vw;
+	}
+
+	.detalles p:nth-child(6n - 3) {
+	display: none;
+	}
+
+	.btnimp {
+	display: none;
+	}
+    .finalq {
+    display: none;
+    }
+}

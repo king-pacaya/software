@@ -1,0 +1,78 @@
+* {
+margin: 0;
+box-sizing: border-box;
+font-family: 'DM Sans', sans-serif;
+}
+
+body {
+padding: 0 2vw;
+}
+
+h1 {
+margin: 2vh 0;
+display: flex;
+align-items: center;
+justify-content: center;
+font-family: 'Archivo Black', sans-serif !important;
+font-size: 30px;
+}
+
+.dropdown {
+margin: 2vh 0;
+padding: 0.5vh 0;
+display: flex;
+align-items: center;
+}
+
+select {
+cursor: pointer;
+margin: 0 1vw;
+}
+
+table {
+margin: 0 auto 3vh auto;
+width: 100%;
+border-collapse: collapse;
+}
+	table th {
+	text-align: center;
+	color: white;
+	padding: 1vh 0;
+	}
+	table tr:nth-child(even) {
+	background: #cedfdf;
+	}
+	table th:nth-child(odd) {
+	background: #f74705;
+	}
+	table th:nth-child(even) {
+	background: black;
+	}
+	table td {
+	text-align: center;
+	padding: 1vh 0;
+	}
+	table button {
+	cursor: pointer;
+	background: transparent;
+	border: none;
+	color: black;
+	font-size: 20px;
+	}
+
+.pagcont {
+position: relative;
+display: flex;
+height: auto;
+width: 100%;
+margin: 2vh 0;
+padding: 2vh 0;
+}
+
+.paga, .pagn, .pagb {
+margin: 2vh 0.5vw;
+background: #f74705;
+padding: 1vh 1vw;
+color: white;
+text-decoration: none;
+}
